@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 3.1 -->
+    <div id="ele1">hello</div>
+
+    <!-- 4 -->
+    <section class="boxes">
+      <div
+        id="box1"
+        style="width: 200px; height: 200px; background-color: black"
+      ></div>
+      <div
+        id="box2"
+        style="width: 200px; height: 200px; background-color: #686868"
+      ></div>
+      <div
+        id="box3"
+        style="width: 200px; height: 200px; background-color: #bebebe"
+      ></div>
+      <div
+        id="box4"
+        style="width: 200px; height: 200px; background-color: #dcdcdc"
+      ></div>
+    </section>
+
+    <section class="keySelected">
+      <div id="keySelected"></div>
+    </section>
+
+    <script>
+      //3.1
+      /* function pintar() {
+        ele.style.backgroundColor = "yellow";
+      }
+      ele = document.getElementById("ele1");
+      ele.addEventListener("click", pintar); */
+
+      //3.2
+      /* function pintar(selectId, color = "green") {
+        selectId.style.backgroundColor = color;
+      }
+
+      ele = document.getElementById("ele1");
+      pintar(ele1);
+      ele.addEventListener("click", () => pintar(ele1, "yellow")); */
+
+      //3.3
+
+      //4
+      let color = "";
+
+      document.addEventListener("keydown", (e) => {
+        console.log(e);
+        let key = document.getElementById("keySelected");
+        const keyLowerCase = e.key.toLowerCase();
+        if (keyLowerCase === "a") {
+          key.textContent = "A";
+          key.style.color = "#138D75";
+          color = "#138D75";
+        } else if (keyLowerCase === "s") {
+          key.textContent = "S";
+          key.style.color = "#16A085";
+          color = "#16A085";
+        } else if (keyLowerCase === "d") {
+          key.textContent = "D";
+          key.style.color = "#45B39D";
+          color = "#45B39D";
+        } else if (keyLowerCase === "f") {
+          key.textContent = "F";
+          key.style.color = "#73C6B6";
+          color = "#73C6B6";
+        }
+      });
+
+      let sAll = document.querySelectorAll(".boxes div");
+      console.log(sAll);
+        sAll.forEach((e) => {
+            e.addEventListener("click", () => {
+            e.style.backgroundColor = color;
+            });
+        });
+            
+    </script>
+  </body>
+</html>

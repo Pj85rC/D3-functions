@@ -1,0 +1,21 @@
+.boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0rem;  
+}
+
+.boxes div{
+    border-radius: 50%;   
+}
+
+.keySelected{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.keySelected div{
+    font-size: 1500%;
+    font-weight: bolder;
+}
